@@ -1,0 +1,12 @@
+.button{
+    display: flex;
+    text-align: center;
+    width: 400px;
+    height: 480px;
+}
+
+.text{
+    color: red;
+    text-align: center;
+    font-size: 30px;
+}
