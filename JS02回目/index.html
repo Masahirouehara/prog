@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>myMemoPad</title>
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<header>
+    <h2>お申込みフォーム</h2>
+</header>
+<body>
+<div class="table">
+<table class="form">
+      <tbody>
+        <tr>
+          <th>名前</th>
+          <td><input id="name" type="text" name="name" size="60">
+          </td>
+        </tr>
+        <tr>
+          <th>カナ</th>
+          <td><input id="kana" type="text" name="name" size="60">
+          </td>
+        </tr>
+        <tr>
+          <th>メールアドレス</th>
+          <td><input id="adress" type="text" name="email" size="60">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+<div class="button">
+ <li><button id="send">送信</button></li>
+ <li><button id="cancel">取り消し</button></li>
+</div>
+
+<script>
+$("#send").on('click',function(){
+     const key = $("#name").val();
+     const value = $("#adress").val();
+
+     localStorage.setItem(key, value);
+
+     const html = `
+     <tr>
+        <th>${key}</th>
+        <td>${value}</td>
+
+        </tr>
+     `})
+
+$("#cancel").on("click",function(){
+    localStorage.clear();
+    $("#list").empty();
+})
+
+</script>
+</body>
+</html>
