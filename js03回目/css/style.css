@@ -1,0 +1,23 @@
+header{
+    color: blue;
+    border-bottom: 1px solid #ccc;
+    text-align: center;  
+    margin: 10px;
+}
+
+select {
+    margin: 5px 2%;
+    width: 30%;
+    height: 30px;
+    font-size: 80%;
+    background-color: rgb(241, 239, 239);
+  }
+
+  button{
+      margin: 10px;
+  }
+
+div{
+    text-align: center;
+}
+
