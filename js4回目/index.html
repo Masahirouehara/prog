@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    
+</head>
+<body>
+  <p>お気に入りビーチ検索</p>
+  <div class="select">
+  <select id="beach">
+    <option value="アラハビーチ">アラハビーチ</option>
+    <option value="サンセットビーチ">サンセットビーチ</option>
+    <option value="大泊ビーチ">大泊ビーチ</option>
+    </select>
+</div>
+
+  <div class="mapp">
+  <div id="map" style="width:600px; height:400px"></div>
+  </div>
+  <script type="text/javascript">
+  function initMap() {
+    var opts = {
+      zoom: 15,
+      center: new google.maps.LatLng(26.30572635511332, 127.75804751546984)
+    };
+    var map = new google.maps.Map(document.getElementById("map"), opts);
+  }
+  </script>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=<キー>&callback=initMap">
+  </script>
+
+  <script>
+/*
+やりたかったこと(できなかった)
+ビーチを選択ごとに、表示する地図を変えたかった。
+↓でやろうとしたができなかった。
+
+<script>
+    let beachname = "#beach"
+    if(beachname === "アラハビーチ"){
+     var opts = {
+      zoom: 15,
+      center: new google.maps.LatLng(26.30572635511332, 127.75804751546984)
+    };
+    var map = new google.maps.Map(document.getElementById("map"), opts);
+  }     
+    }if else(beachname === "サンセットビーチ"){
+        var opts = {
+      zoom: 15,
+      center: new google.maps.LatLng(26.31368538213798, 127.7552997315254)
+    };
+    var map = new google.maps.Map(document.getElementById("map"), opts);
+  }     
+    }
+    }if else(beachname === "大泊ビーチ"){
+        var opts = {
+      zoom: 15,
+      center: new google.maps.LatLng(26.394324227659485, 127.99109946588214)
+    };
+    var map = new google.maps.Map(document.getElementById("map"), opts);
+  }     
+    }
+*/   
+
+  </script>
+
+
+</body>
+</html>
